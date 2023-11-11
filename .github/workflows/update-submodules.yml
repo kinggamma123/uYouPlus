@@ -18,9 +18,10 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --init --recursive
-          git commit -am "update submodules"
-          git push
+          git submodule update --init --recursive --remote Tweaks/Return-YouTube-Dislikes
+          git add .
+          git commit -m "updated submodules"
+          git push origin
         continue-on-error: true
 
       - name: Check exit code
