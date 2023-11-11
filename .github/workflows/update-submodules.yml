@@ -17,10 +17,10 @@ jobs:
     name: Update submodules
     runs-on: ubuntu-latest
     env:
-      PARENT_REPOSITORY: 'qnblackcat/uYouPlus'
+      PARENT_REPOSITORY: 'kinggamma123/uYouPlus'
       CHECKOUT_BRANCH: 'main'
       PR_AGAINST_BRANCH: 'main'
-      OWNER: 'qnblackcat'
+      OWNER: 'kinggamma123'
 
     steps:
       ##########################
@@ -34,7 +34,7 @@ jobs:
       ####################################
       - name: run action
         id: run_action
-        uses: qnblackcat/github-action-create-pr-parent-submodule@main
+        uses: kinggamma123/github-action-create-pr-parent-submodule@main
         with:
           github_token: ${{ secrets.RELEASE_HUB_SECRET }}
           parent_repository: ${{ env.PARENT_REPOSITORY }}
