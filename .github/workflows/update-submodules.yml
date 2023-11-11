@@ -5,10 +5,13 @@ name: Update submodules!
 # Start the job on all push #
 #############################
 on:
-  schedule:
-    - cron: "0 0 */7 * *"
-  workflow_dispatch:
+  push:
+      branches: [main]
+  pull_request:
+    branches: [main]
 
+
+permissions: read-all
 ###############
 # Set the Job #
 ###############
